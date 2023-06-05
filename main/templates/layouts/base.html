@@ -1,0 +1,255 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <!-- =========================================
+    head
+    ========================================== -->
+    <head>
+
+
+        <!-- =========================================
+        Basic
+        ========================================== -->
+        <title>{% block title %}Поилка Космоса{% endblock %}</title>
+        <meta name="robots" content="index follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Поилка Космоса" />
+        <meta name="description" content="Поилка Космоса - общажный сайт" />
+
+
+        <!-- =========================================
+        Mobile Configurations
+        ========================================== -->
+        <meta name="GOOGLEBOT" content="index follow" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+
+        <!-- =========================================
+        fav & icons for iPhone and iPad
+        ========================================== -->
+        <link rel="shortcut icon" href="{% static 'images/icons/favicon.ico' %}" />
+        <link rel="apple-touch-icon-precomposed" href="{% static 'images/icons/icon.png' %}" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/icon@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/icon-72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/icon-72@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/icon-60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/icon-60@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/icon-76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/icon-76@2x.png" />
+
+        <!-- =========================================
+        CSS
+        ========================================== -->
+        <link rel="stylesheet" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" media="screen" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" media="screen" href="{% static 'css/alternative-colors/style-2.css' %}" />
+
+        <!-- =========================================
+        Head Libs
+        ========================================== -->
+        <script type="text/javascript" src="{% static 'js/vendor/modernizr.custom.js' %}"></script>
+
+
+    </head><!-- /head -->
+
+
+
+
+    <!-- =========================================
+    body
+    ========================================== -->
+    <body class="parallax-image main-page">
+
+
+
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+
+        <!-- =========================================
+        Loader
+        ========================================== -->
+        <!-- loader -->
+        <div id="loader">
+
+            <!-- loader-container -->
+            <div id="loader-container">
+                <img src="{% static 'images/loader.gif' %}" alt="Loader" />
+            </div><!-- /loader-container -->
+
+        </div><!-- /loader -->
+
+        <!-- =========================================
+        Content
+        ========================================== -->
+        <!-- content-wrapper -->
+        <div id="content-wrapper">
+
+
+
+
+            <!-- =========================================
+            Menu
+            ========================================== -->
+            <!-- menu-wrapper -->
+            <header id="menu-wrapper">
+
+
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+
+
+                        <!-- col-md-12 -->
+                        <div class="col-md-12">
+
+
+                            <!-- navbar-header -->
+                            <div class="navbar-header">
+
+                                <!-- logo -->
+                                <a href="{% url 'main:home' %}" class="navbar-brand" title="Poilka KOSMOSA">
+                                    <img src="{% static 'images/logo.png' %}" alt="Logo" />
+                                </a><!-- /logo -->
+
+                            </div><!-- /navbar-header -->
+
+                            <!-- user-ico -->
+                            <a href="vk.com" id="user-ico">
+                            	<img src="https://avatars.githubusercontent.com/u/59161091?v=4" alt="ava">
+                            </a>
+                            <!-- user-ico -->
+
+
+                        </div><!-- /col-md-12 -->
+
+
+                    </div><!-- /row -->
+                </div><!-- /container -->
+
+
+            </header><!-- /menu-wrapper -->
+
+
+
+
+            <!-- =========================================
+            Home Section
+            ========================================== -->
+            <!-- home-section -->
+            <div id="home-section">
+
+                <!-- home-section-overlayer -->
+                <div id="home-section-overlayer"></div>
+
+
+                <!-- home-section-container -->
+                <div id="home-section-container">
+
+                    <!-- personal-name -->
+                    <div class="personal-name">
+                        <h1>Поилка космоса</h1>
+                    </div><!-- /personal-name -->
+
+                    <!-- personal-title -->
+                    <div class="personal-title">
+                        <h4><span id="personal-typed"></span></h4>
+                    </div><!-- /personal-title -->
+
+                </div><!-- /home-section-container -->
+
+            </div><!-- /home-section -->
+
+
+            <!-- =========================================
+            Page Content
+            ========================================== -->
+            <!-- page-content -->
+            <div id="page-content">
+                {% block page-content %}{% endblock %}
+            </div><!-- /page-content -->
+
+
+
+            <!-- =========================================
+            Footer Section
+            ========================================== -->
+            <!-- footer-section -->
+            <footer id="footer-section">
+
+
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+
+
+                        <!-- col-md-12 -->
+                        <div class="col-md-12">
+
+
+	                        <!-- footer-logo -->
+	                        <div class="footer-logo wow fadeInDown" data-wow-duration="1.5s">
+	                            <!-- logo -->
+                                <a href="#" class="scrollto" title="Poilka KOSMOSA">
+                                    <img src="{% static 'images/logo.png' %}" alt="Logo" />
+                                </a><!-- /logo -->
+	                        </div><!-- /footer-logo -->
+
+
+                            <!-- social-icons -->
+                            <ul class="social-icons wow fadeInUp" data-wow-duration="1.5s">
+                                <li><a href="https://vk.com/club193164904" title="VK"><i class="fa fa-vk"></i></a></li>
+                            </ul><!-- /social-icons -->
+
+
+                            <!-- copyright -->
+                            <p class="copyright wow fadeIn" data-wow-duration="1.5s">
+                                &copy; 2023 Poilka KOSMOSA All Rights Reserved.
+                            </p><!-- /copyright -->
+
+
+                        </div><!-- /col-md-12 -->
+
+
+                    </div><!-- /row -->
+                </div><!-- /container -->
+
+
+            </footer><!-- /footer-section -->
+
+
+        </div><!-- /content-wrapper -->
+
+
+
+
+        <!-- =========================================
+        java script
+        ========================================== -->
+        <script type="text/javascript" src="{% static 'js/vendor/jquery-1.11.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/plugins/plugin.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/Poilka KOSMOSA.js' %}"></script>
+
+
+        <!--[if lt IE 9]>
+            <script src="js/plugins/html5shiv.js"></script>
+            <script src="js/plugins/selectivizr.js"></script>
+        <![endif]-->
+
+
+
+
+    </body><!-- /body -->
+</html><!-- /html -->
