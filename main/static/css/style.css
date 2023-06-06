@@ -2090,7 +2090,7 @@ p.nesto-response {
 }
 .photostack-perspective figure,
 .photostack-perspective figure div {
-	-webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
 .no-csstransformspreserve3d figure.photostack-showback .photostack-back { display: block; }
@@ -2262,7 +2262,7 @@ p.nesto-response {
 }
 .photostack nav span:last-child { margin-right: 0; }
 .photostack nav span.current {
-	background-color: #e14d43;
+    background-color: #e14d43;
 
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
@@ -2664,7 +2664,7 @@ p.nesto-response {
             box-shadow: none;
 
     -webkit-appearance: none;
-	   -moz-appearance: none;
+       -moz-appearance: none;
         -ms-appearance: none;
          -o-appearance: none;
             appearance: none;
@@ -2690,7 +2690,7 @@ p.nesto-response {
 /* 16.3 Textarea
 -------------------------------------------------------------------------- */
 #contactform textarea {
-	width: 100%;
+    width: 100%;
     resize: none;
     margin: 0 auto;
     height: 160px !important;
@@ -3699,7 +3699,7 @@ p.nesto-response {
             box-shadow: none;
 
     -webkit-appearance: none;
-	   -moz-appearance: none;
+       -moz-appearance: none;
         -ms-appearance: none;
          -o-appearance: none;
             appearance: none;
@@ -3725,7 +3725,7 @@ p.nesto-response {
 /* 23.4.3 Textarea
 -------------------------------------------------------------------------- */
 .post-replay textarea {
-	width: 100%;
+    width: 100%;
     resize: none;
     margin: 0 auto;
     height: 160px !important;
@@ -4347,4 +4347,29 @@ body.dark-version,
     float: none;
     margin: 0 auto;
     max-width: 800px;
+}
+
+.login-button {
+    display: block;
+    float: right;
+    margin: 15px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}   
+
+.navbar-brand img {
+    margin: 0;
+}
+
+@media only screen and (max-width: 499px) {
+    .navbar-header {
+        width: 190px;
+    }
+
+    .navbar-brand img {
+        width: 100%;
+    }
 }

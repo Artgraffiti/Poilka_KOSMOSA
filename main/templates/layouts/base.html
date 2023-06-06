@@ -124,11 +124,17 @@
 
                             </div><!-- /navbar-header -->
 
+                            {% if user.is_authenticated %}
                             <!-- user-ico -->
-                            <a href="vk.com" id="user-ico">
-                            	<img src="https://avatars.githubusercontent.com/u/59161091?v=4" alt="ava">
+                            <a href="https://vk.com/id533754223" id="user-ico">
+                                <img src="https://avatars.githubusercontent.com/u/59161091?v=4" alt="ava" title="{{ user.username }}">
                             </a>
                             <!-- user-ico -->
+                            {% else %}
+                            <div class="login-button">
+                                <a href="{% url 'social:begin' 'vk-oauth2' %}" class="btn btn-nesto-o">Войти</a>
+                            </div>
+                            {% endif %}
 
 
                         </div><!-- /col-md-12 -->

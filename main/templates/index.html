@@ -5,7 +5,6 @@
 <!-- col-md-12 -->
 <div class="col-md-12">
 
-
     <!-- portfoliofilter -->
     <div class="portfoliofilter">
 
@@ -24,8 +23,104 @@
             {% endfor %}
         </ul>
 
-    </div><!-- /portfoliofilter -->
-
+    </div>
+    <!-- /portfoliofilter -->
 
 </div><!-- /col-md-12 -->
+
+<!-- container -->
+<div class="container">
+    <!-- row -->
+    <div class="row">
+
+
+        <!-- col-md-8 -->
+        <div class="col-md-8 blog-posts">
+
+            {% for post in posts %}
+            <!-- post-main-wrapper -->
+            <div class="post-main-wrapper">
+
+
+                <!-- post-wrapper -->
+                <div class="post-wrapper default-post-type">
+
+
+                    <!-- post-container -->
+                    <div class="post-container">
+
+                        <!-- post-title -->
+                        <div class="post-title">
+                            <h2>
+                                <a href="single-post.html" title="Default Post Type">
+                                    {{ post.title }}
+                                </a>
+                            </h2>
+                        </div><!-- /post-title -->
+
+
+                        <!-- post-meta -->
+                        <div class="post-meta">
+
+                            <!-- post-date -->
+                            <span class="post-date">
+                                <i class="fa fa-clock-o"></i>
+                                <a href="#" title="Date">{{ post.created_at }}</a>
+                            </span><!-- /post-date -->
+
+                            <!-- post-author -->
+                            <span class="post-author">
+                                <i class="fa fa-user"></i>
+                                <a href="#" title="Author">{{ post.author }}</a>
+                            </span><!-- /post-author -->
+
+                            <!-- post-cat -->
+                            <span class="post-cat">
+                                <i class="fa fa-folder-open"></i>
+                                <a href="#" title="Category">{{ post.category }}</a>
+                            </span><!-- /post-cat -->
+
+                        </div><!-- /post-meta -->
+
+
+                        <!-- post-content -->
+                        <div class="post-content">
+                            <p>{{ post.content }} [...]</p>
+                        </div><!-- /post-content -->
+
+
+                    </div><!-- /post-container -->
+
+
+                    <!-- post-link -->
+                    <div class="post-link">
+                        <a href="single-post.html" title="Прокомментировать">
+                            <span>
+                                <span class="post-type"></span>
+                                <span class="post-anchor"></span>
+                            </span>
+                        </a>
+                    </div><!-- /post-link -->
+
+
+                </div><!-- /post-wrapper -->
+
+
+            </div><!-- /post-main-wrapper -->
+            {% endfor %}
+
+        </div><!-- /col-md-8 -->
+
+
+        <!-- more-button -->
+        <div class="more-button">
+            <a href="#" title="Load More" class="btn btn-lg btn-nesto">
+                Загрузить больше
+            </a>
+        </div><!-- /more-button -->
+
+
+    </div><!-- /row -->
+</div><!-- /container -->
+
 {% endblock %}
