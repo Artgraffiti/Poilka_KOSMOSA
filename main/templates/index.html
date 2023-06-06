@@ -2,5 +2,30 @@
 
 
 {% block page-content %}
+<!-- col-md-12 -->
+<div class="col-md-12">
 
+
+    <!-- portfoliofilter -->
+    <div class="portfoliofilter">
+
+        <ul>
+            <li>
+                <a href="{% url 'main:home' %}" class="selected btn btn-default btn-nesto" data-filter="*" title="Всё">
+                    Всё
+                </a>
+            </li>
+            {% for category in categories %}
+            <li>
+                <a href="#" data-filter=".portfolio-web" title="{{ category.name }}" class="btn btn-default btn-nesto">
+                    {{ category.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </div><!-- /portfoliofilter -->
+
+
+</div><!-- /col-md-12 -->
 {% endblock %}

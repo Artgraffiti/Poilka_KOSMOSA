@@ -422,20 +422,6 @@ jQuery(window).load(function () {
             }
         });
     }
-    jQuery('.portfoliofilter a').on('click', function (e) {
-        jQuery('.portfoliofilter a').removeClass('selected');
-        jQuery(this).addClass('selected');
-        var selector = jQuery(this).attr('data-filter');
-        portfoliogrid.isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 850,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        return false;
-    });
 
     /* ==========================================================================
     WOW Animation
