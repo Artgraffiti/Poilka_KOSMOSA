@@ -38,7 +38,7 @@
                 <!-- post-cat -->
                 <span class="post-cat">
                     <i class="fa fa-folder-open"></i>
-                    <a href="#" title="{{ post.category }}">{{ post.category }}</a>
+                    <a href="{% url 'main:home' %}?category={{ post.category.slug }}" title="{{ post.category }}">{{ post.category }}</a>
                 </span><!-- /post-cat -->
 
             </div><!-- /post-meta -->
