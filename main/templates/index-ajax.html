@@ -74,7 +74,7 @@
 {% if page.has_next %}
 <!-- more-button -->
 <div class="load-more-wrapper">
-    <button class="btn btn-lg btn-nesto" id="load-more" data-next-page-url="pbp?page={{ page.next_page_number }}">
+    <button class="btn btn-lg btn-nesto" id="load-more" data-next-page-url="{% url 'main:home' %}?page={{ page.next_page_number }}&category={{ request.GET.category }}">
         Загрузить ещё
     </button>
 </div>

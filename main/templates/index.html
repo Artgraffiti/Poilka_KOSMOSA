@@ -10,13 +10,14 @@
 
         <ul>
             <li>
-                <a href="{% url 'main:home' %}" class="selected btn btn-default btn-nesto" data-filter="*" title="Всё">
+                <a href="{% url 'main:home' %}" class="{% if not request.GET.category %}selected{% endif %} btn btn-default btn-nesto" data-filter="*" title="Всё">
                     Всё
                 </a>
             </li>
             {% for category in categories %}
             <li>
-                <a href="#" data-filter=".portfolio-web" title="{{ category.name }}" class="btn btn-default btn-nesto">
+                <a href="{% url 'main:home' %}?category={{ category.slug }}" title="{{ category.name }}" 
+                class="{% if category.slug == request.GET.category %}selected{% endif %} btn btn-default btn-nesto">
                     {{ category.name }}
                 </a>
             </li>
@@ -115,7 +116,7 @@
         {% if page.has_next %}
         <!-- more-button -->
         <div class="load-more-wrapper">
-            <button class="btn btn-lg btn-nesto" id="load-more" data-next-page-url="pbp?page={{ page.next_page_number }}">
+            <button class="btn btn-lg btn-nesto" id="load-more" data-next-page-url="{% url 'main:home' %}?page={{ page.next_page_number }}&category={{ request.GET.category }}">
                 Загрузить ещё
             </button>
         </div>
