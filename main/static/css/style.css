@@ -4377,3 +4377,9 @@ body.dark-version,
     font-size: 25px;
     line-height: 30px;
 }
+
+
+.load-more-wrapper {
+    width: 100%;
+    text-align: center;
+}

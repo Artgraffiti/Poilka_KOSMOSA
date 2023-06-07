@@ -436,4 +436,28 @@ jQuery(window).load(function () {
     }
 
 
+    /* Poilka KOSMOSA */
+
+
+    function loadMore() {
+        var moreButton = $("#load-more");
+        var nextPageUrl = moreButton.attr("data-next-page-url");
+
+        if (nextPageUrl) {
+            $.ajax({
+                url: nextPageUrl,
+                success: function(data) {
+                    $(".blog-posts").append(data);
+                    moreButton.remove();
+                    
+                    
+                    var $loadedContent = $(data);
+                    nextPageUrl = $("#load-more").attr("data-next-page-url");
+                }
+            });
+        }
+    }
+
+    $(document).on("click", "#load-more", loadMore);
+
 });

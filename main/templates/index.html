@@ -112,12 +112,15 @@
         </div><!-- /col-md-8 -->
 
 
+        {% if page.has_next %}
         <!-- more-button -->
-        <div class="more-button">
-            <a href="#" title="Загрузить больше" class="btn btn-lg btn-nesto">
-                Загрузить больше
-            </a>
-        </div><!-- /more-button -->
+        <div class="load-more-wrapper">
+            <button class="btn btn-lg btn-nesto" id="load-more" data-next-page-url="pbp?page={{ page.next_page_number }}">
+                Загрузить ещё
+            </button>
+        </div>
+        <!-- /more-button -->
+        {% endif %}
 
 
     </div><!-- /row -->
