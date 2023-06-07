@@ -319,7 +319,6 @@ body {
     overflow-x: hidden;
     background-color: #ffffff;
     -webkit-text-size-adjust: 100%;
-    font: 16px/27px 'Karma', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -3375,7 +3374,7 @@ p.nesto-response {
     overflow: hidden;
     margin: 0 auto 15px;
 }
-.post-wrapper .post-title h2 { text-transform: capitalize; }
+
 .post-wrapper .post-title a { color: #232323; }
 .post-wrapper .post-title a:hover { color: #e14d43; }
 
@@ -4372,4 +4371,9 @@ body.dark-version,
     .navbar-brand img {
         width: 100%;
     }
+}
+
+.post-title h2 {
+    font-size: 25px;
+    line-height: 30px;
 }
